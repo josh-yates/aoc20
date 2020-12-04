@@ -22,7 +22,7 @@ func main() {
 	for scanner.Scan() {
 		if row > 0 {
 			line := scanner.Text()
-			index := (row * 3) % 31
+			index := (row * 3) % len(line)
 
 			if line[index] == '#' {
 				trees++
